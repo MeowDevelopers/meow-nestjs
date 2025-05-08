@@ -134,3 +134,48 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Prisma
+prisma/generated/
+*.db
+*.sqlite
+
+# VS Code settings (optional)
+.vscode/
+
+# NestJS specific
+.idea/
+nestjs-debug.log
+.project
+*.swp
+
+# Compiled NestJS files
+dist/
+.cache/
+
