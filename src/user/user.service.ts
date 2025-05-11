@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import * as dayjs from 'dayjs';
 
 @Injectable()
 export class UserService {
@@ -22,5 +23,15 @@ export class UserService {
 
   remove(id: number) {
     return `This action removes a #${id} user`;
+  }
+
+  recommendId(name: string) {
+    const randomNumber = Math.floor(100 + Math.random() * 900);
+    return `${name}${randomNumber}`;
+  }
+
+  createUser(userId: string) {
+    const now = dayjs().format('YYYY-MM-DD HH:mm:ss');
+    return `Create Success : ${userId} (${now})`;
   }
 }

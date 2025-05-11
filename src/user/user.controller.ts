@@ -31,4 +31,14 @@ export class UserController {
   remove(@Param('id') id: string) {
     return this.userService.remove(+id);
   }
+
+  @Get('recommend/:name')
+  recommendId(@Param('name') name: string) {
+    return this.userService.recommendId(name);
+  }
+
+  @Post('/new')
+  createUser(@Body() body: { userId: string }) {
+    return this.userService.createUser(body.userId);
+  }
 }
